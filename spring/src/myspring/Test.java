@@ -1,15 +1,9 @@
 package myspring;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 @Controller
 @RequestMapping(produces = "application/json")
@@ -29,13 +23,27 @@ public class Test {
 
     }
 
-    @RequestMapping(value = "/restaurant/{id}", method = RequestMethod.GET)
+    @RequestMapping(value = "/user/{id}", method = RequestMethod.GET)
     public
     @ResponseBody
-    String getRestaurant(@PathVariable String id) {
+    Order getUserId(@PathVariable String id) {
 
-        return id;
+        Order order = new Order();
+        order.setId(id);
+        Item item = new Item();
+        item.setId("123");
+        item.setName("Computer");
+        order.setItems(Arrays.asList(item));
+        return order;
 
+    }
+
+    @RequestMapping(value = "/order", method = RequestMethod.POST)
+    public
+    @ResponseBody
+    Order postOrder(@RequestBody Order order) {
+        order.setId("bla");
+        return order;
     }
 
 }
