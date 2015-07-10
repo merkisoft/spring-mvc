@@ -2,10 +2,7 @@ package myspring;
 
 import model.Products;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.*;
 
@@ -31,6 +28,22 @@ public class Product {
         model.Product product = Products.getInstance().getProduct(name);
 
         return product;
+    }
+
+    @RequestMapping(value = "/product/id/{id}", method = RequestMethod.GET)
+    public
+    @ResponseBody
+    model.Product getProduct(@PathVariable Integer id) {
+        return null;
+    }
+
+    @RequestMapping(value = "/product/update", method = RequestMethod.POST)
+    public
+    @ResponseBody
+    Boolean updateProduct(@RequestBody model.Product product) {
+        Products.getInstance().updateProduct(product);
+
+        return true;
     }
 
 
