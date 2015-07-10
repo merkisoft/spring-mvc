@@ -40,8 +40,7 @@ public class Products {
     public Products() {
         try {
             cpsConnection = new CPSConnection("tcps://cloud-eu-0.clusterpoint.com:9008", "Products",
-                    System.getProperty( "DB_USER"), System.getProperty( "DB_PASSWORD"),
-                    System.getProperty( "DB_ACCOUNT"), "document", "//document/id");
+                    "testuser", "Test42", "1302", "document", "//document/id");
         } catch (Exception e) {
             e.printStackTrace();
         }
