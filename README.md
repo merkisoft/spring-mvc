@@ -15,12 +15,12 @@ update web.xml / dispatcher-servlet.xml
 
 
 ### create website using yo:
-
-sudo
-    npm update -g npm
-    npm install -g grunt-cli
-	npm install gulp
-	npm install
+cd Test/spring-mvc/web
+npm install
+sudo npm install -g grunt-cli
+sudo npm install -g bower
+bower update
+grunt serve
 
 #### grunt has issues resolving:
 
