@@ -8,10 +8,13 @@
  * Controller of the yoApp
  */
 angular.module('yoApp')
-  .controller('MainCtrl', function () {
+  .controller('MainCtrl', ['products', '$scope', function (products, $scope) {
+
+    $scope.products = products.products;
+
     this.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
       'Karma'
     ];
-  });
+  }]);

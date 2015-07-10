@@ -22,6 +22,11 @@ sudo npm install -g bower
 bower update
 grunt serve
 
+
+bower install restangular
+bower install lodash
+
+
 #### grunt has issues resolving:
 
 gruntfile.js
