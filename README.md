@@ -1,4 +1,4 @@
-# spring-mvc
+# spring mvc rest service + angularjs app
 
 ## requirements
 - intellij plugins: spring mvc, github, rest client
