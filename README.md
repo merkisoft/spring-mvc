@@ -15,12 +15,12 @@ update web.xml / dispatcher-servlet.xml
 
 
 ### create website using yo:
-cd Test/spring-mvc/web
-npm install
-sudo npm install -g grunt-cli
-sudo npm install -g bower
-bower update
-grunt serve
+- cd Test/spring-mvc/web
+- npm install
+- sudo npm install -g grunt-cli
+- sudo npm install -g bower
+- bower update
+- grunt serve
 
 
 bower install restangular
